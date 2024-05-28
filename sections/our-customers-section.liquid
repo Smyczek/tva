@@ -1,0 +1,116 @@
+{{ 'section-customers.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div id="Customers-{{ section.id }}" class="customers-section color-scheme-1">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="title-wrapper title-wrapper--no-top-margin title-wrapper--no-bottom-margin">
+      {% if section.settings.heading != blank %}
+        <h2 class="title h1">{{ section.settings.heading }}</h2>
+      {% endif %}
+    </div>
+    <div class="customer-reviews">
+      <div class="customer-review">
+        {{ section.settings.review_1_txt }}
+        <div class="author">
+          <span>{% render 'icon-author' %}</span>{{ section.settings.review_1_author }}
+        </div>
+      </div>
+      <div class="customer-review">
+        {{ section.settings.review_2_txt }}
+        <div class="author">
+          <span>{% render 'icon-author' %}</span>{{ section.settings.review_2_author }}
+        </div>
+      </div>
+      <div class="customer-review">
+        {{ section.settings.review_3_txt }}
+        <div class="author">
+          <span>{% render 'icon-author' %}</span>{{ section.settings.review_3_author }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our Customers Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "review_1_txt",
+      "label": "Review 1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "review_1_author",
+      "label": "Review 1 author"
+    },
+    {
+      "type": "richtext",
+      "id": "review_2_txt",
+      "label": "Review 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "review_2_author",
+      "label": "Review 2 author"
+    },
+    {
+      "type": "richtext",
+      "id": "review_3_txt",
+      "label": "Review 3"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "review_3_author",
+      "label": "Review 3 author"
+    },
+    {
+      "type": "range",
+      "id": "top_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.top_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Customers Section"
+    }
+  ]
+}
+{% endschema %}

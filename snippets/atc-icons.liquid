@@ -1,0 +1,21 @@
+{{ 'atc-icons.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-guarnetee">
+  <ul class="list-unstyled">
+    <li>{% render 'icon-shipping' %} FREE Shipping</li>
+    <li>{% render 'icon-secure' %} SECURE Ordering</li>
+    <li>{% render 'icon-satisfaction' %} SATISFACTION Guarantee</li>
+  </ul>
+</div>
+<div class="payments-icons">
+  <div class="payments-icons-text">
+    <strong>GUARANTEED SAFE & SECURE CHECKOUT</strong>
+  </div>
+  <ul class="list list-payment" role="list">
+    {%- for type in shop.enabled_payment_types -%}
+      <li class="list-payment__item">
+        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

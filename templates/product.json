@@ -1,0 +1,444 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_liquid_qWAAfX": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h2 class=\"h1\">Truvision All in One <strong>Digital Eye Chart<\/strong><\/h2>"
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "Truvision is the only visual acuity system on the market with tablet and smartphone controllers. We packaged accuracy and premium convenience into one software- without the premium cost. ",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "atc_icons_XXU6t6": {
+          "type": "atc_icons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_qWAAfX",
+        "caption",
+        "price",
+        "buy_buttons",
+        "atc_icons_XXU6t6"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_3AQ48H": {
+      "type": "rich-text",
+      "blocks": {
+        "text_fTfgjA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Say goodbye to clunky analog remotes and hello to controlling your digital acuity system with a tablet or even on your smartphone.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_fTfgjA"
+      ],
+      "settings": {
+        "custom_class": "text-and-shapes",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "text_and_video_UBHpkF": {
+      "type": "text-and-video",
+      "settings": {
+        "heading": "Watch this <strong>Quick Video<\/strong>",
+        "heading_size": "h1",
+        "sub_heading": "To get a closer look at our modern, convenient, groundbreaking software that’s disrupting the eye chart industry.",
+        "text": "<p>Our state-of-the-art visual acuity system is built especially for the optometrist or ophthalmologist. This eye chart software is simple, efficient, and comes in an all-in-one setup for instant integration.<\/p>",
+        "btn_text": "BUY NOW",
+        "btn_url": "\/cart\/26363252604992:1",
+        "btn_type": "primary",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=Nm6-PYefl-g&t=1s",
+        "cover_image": "shopify:\/\/shop_images\/Nm6-PYefl-g-HD.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_jyLyMe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jwkEAn": {
+          "type": "column",
+          "settings": {
+            "title": "Calibrate <strong>Once<\/strong> and <strong>Done<\/strong>",
+            "text": "<p>You don’t even have to install the software yourself! Everything comes pre-loaded on a computer, along with a monitor and wall mount.  <\/p><p>Calibrate the system once, and you’re all set to perform an eye exam.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zdh3aL": {
+          "type": "column",
+          "settings": {
+            "title": "Control with <strong>Keyboard<\/strong>, <strong>Tablet<\/strong>, or <strong>Other Device<\/strong>",
+            "text": "<p>Control our digital vision chart with either the provided Bluetooth keyboard, provided tablet, or with a device of your choosing.<\/p><p>This includes smartphones or existing computers.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_jwkEAn",
+        "column_zdh3aL"
+      ],
+      "settings": {
+        "custom_class": "white-card-lg",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_zE4czU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_XjrrhF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/computer_c2e7055d-b25f-4156-92f0-a8edc532cbe5.jpg",
+            "title": "",
+            "text": "<p>Computer with propriety software installed<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fyXHtt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/keyboard.jpg",
+            "title": "",
+            "text": "<p>Wireless keyboard & mouse touchpad combo<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fqfDB7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tablet_d3da748d-356f-4fdf-8345-c6f8963d81cb.jpg",
+            "title": "",
+            "text": "<p>Android tablet<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yHXLw9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/monitor.jpg",
+            "title": "",
+            "text": "<p>22” high-quality monitor<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AdakyT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vesa.jpg",
+            "title": "",
+            "text": "<p>Wall mount for monitor<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JBHwJP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/phone.jpg",
+            "title": "",
+            "text": "<p>Ability to integrate with mobile<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MEgkmL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/warranty.jpg",
+            "title": "",
+            "text": "<p>2-year warranty on control module (excluding non-proprietary hardware)<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XjrrhF",
+        "column_fyXHtt",
+        "column_fqfDB7",
+        "column_yHXLw9",
+        "column_AdakyT",
+        "column_JBHwJP",
+        "column_MEgkmL"
+      ],
+      "settings": {
+        "custom_class": "complete-kit",
+        "title": "Our <strong>Complete Kit<\/strong> Includes",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "features_section_rT34YJ": {
+      "type": "features-section",
+      "settings": {
+        "heading": "<p><strong>TRUVISION<\/strong> is packed <br\/>with <strong>Features<\/strong><\/p>",
+        "txt": "<ul><li>Sloan optotypes <\/li><li>Duochrome screen <\/li><li>Mirrored lane compatibility <\/li><li>Randomized optotype presentation <\/li><li>Tumbling letter E <\/li><li>LEA symbols<\/li><li>Pictures <\/li><li>Numbers <\/li><li>Single line <\/li><li>Single letter <\/li><li>Groups of lines and letters<\/li><\/ul>",
+        "product_id": "truvision-all-in-one-digital-eye-chart",
+        "image": "shopify:\/\/shop_images\/home-product_140beef6-78f1-48cb-9333-c670781a8b9f.jpg",
+        "old_price": false,
+        "top_bottom": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_4hkjam": {
+      "type": "rich-text",
+      "blocks": {
+        "text_9cA4Vg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Throw those clunky remotes aside and modernize the way you conduct eye exams. Truvision enables you to perform vision tests with true accuracy.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_9cA4Vg"
+      ],
+      "settings": {
+        "custom_class": "text-and-shapes",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_wcdj4N": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VQTTyN": {
+          "type": "column",
+          "settings": {
+            "title": "Charts & Beyond",
+            "text": "<p>Our digital test charts come with all the features you need to give an eye exam– accurately and comfortably. Not only do we provide the basics, but we also provide test customization. Use LEA symbols, pictures, numbers, tumbling E, LEA symbols, and much more. Truvision goes beyond a simple eye chart.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PT7APG": {
+          "type": "column",
+          "settings": {
+            "title": "Full Setup for One Lane",
+            "text": "<p>This digital acuity system provides a wireless keyboard and touchpad, Android tablet, 22” monitor, mounting hardware, HDMI and power cables, and a built-in manual for one-and-done calibration. This is everything you need for one lane of operation.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wVj3hQ": {
+          "type": "column",
+          "settings": {
+            "title": "Simple Streamlining",
+            "text": "<p>At Truvision, we believe that modern means efficiency. Your eye chart software connects to any WiFi-enabled device. This includes the keyboard you will receive; however, you can also operate the keyboard wirelessly. To make our software even more streamlined, our interface intuitively displays the patient’s view- without the need for remotes or clickers. Our ultimate goal is simplicity for both optometrists and patients.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VQTTyN",
+        "column_PT7APG",
+        "column_wVj3hQ"
+      ],
+      "settings": {
+        "custom_class": "white-card",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_GGDwVh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zgq7hm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Practice, Our Promise <strong>Happiness Guarantee<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_ffMFkJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We prioritize your experience using Truvision. So, our technology- from software to hardware- is built with high-quality components and created for supreme performance. We take every step to guarantee that you can rely on the digital visual acuity chart from Truvision. Strengthening your practice is our promise.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zgq7hm",
+        "text_ffMFkJ"
+      ],
+      "settings": {
+        "custom_class": "text-and-shapes title-and-shapes",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "question_section_kjB3hr": {
+      "type": "question-section",
+      "settings": {
+        "sub_heading": "<h3>Have any questions or want to learn more about Truvision? <br\/>Contact us at <br\/><a href=\"mailto:support@truvisionacuity.com\" target=\"_blank\" title=\"Contact Us email\">support@truvisionacuity.com<\/a><\/h3>",
+        "product_id": "truvision-all-in-one-digital-eye-chart",
+        "image": "shopify:\/\/shop_images\/woman.png",
+        "image_2": "shopify:\/\/shop_images\/home-product_140beef6-78f1-48cb-9333-c670781a8b9f.jpg",
+        "old_price": true,
+        "padding_bottom": 36
+      }
+    },
+    "our_customers_section_zHfTEq": {
+      "type": "our-customers-section",
+      "settings": {
+        "heading": "<p>Don't Take Our Word For it!  Here's What <strong>Our Customers<\/strong> Think:<\/p>",
+        "review_1_txt": "<p><em>\"This system is so versatile, simple to use, and gone are the days when you have to worry about the patient \"memorizing the chart.\" I strongly recommend Truvision Visual Acuity system, and I have been very satisfied --- both with the product and the customer service\"<\/em><\/p>",
+        "review_1_author": "Dr. Patrick McGee",
+        "review_2_txt": "<p><em>\"Chart works great I highly recommend this system\"<\/em><\/p>",
+        "review_2_author": "David Gardiner OD, MS Eye Trends",
+        "review_3_txt": "<p><em>\"he Truvision Acuity System has served my office very well for the last few years. It's never gone down once and the customer service is very helpful and responsive. I'm very happy with my system.\"<\/em><\/p>",
+        "review_3_author": "Dr. Scott Gauthreaux",
+        "top_bottom": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_VtAcfT": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "From The <strong>Clinic<\/strong>",
+        "heading_size": "h1",
+        "blog": "from-the-clinic",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_3AQ48H",
+    "text_and_video_UBHpkF",
+    "multicolumn_jyLyMe",
+    "multicolumn_zE4czU",
+    "features_section_rT34YJ",
+    "rich_text_4hkjam",
+    "multicolumn_wcdj4N",
+    "rich_text_GGDwVh",
+    "question_section_kjB3hr",
+    "our_customers_section_zHfTEq",
+    "featured_blog_VtAcfT",
+    "related-products"
+  ]
+}

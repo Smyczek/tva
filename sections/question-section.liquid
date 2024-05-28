@@ -1,0 +1,124 @@
+{{ 'section-question.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div id="Question-{{ section.id }}" class="question-section">
+  <div class="page-width">
+    <div class="question-section-content">
+      <div class="question-header">
+        {% if section.settings.sub_heading != blank %}
+          {{ section.settings.sub_heading }}
+        {% endif %}
+      </div>
+
+      <div class="question-woman">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | image_url }}"
+            width="auto"
+            height="600"
+            loading="lazy"
+            alt="{{ section.settings.image.alt }}"
+          >
+        {% endif %}
+      </div>
+
+      {% if section.settings.product_id != null %}
+        {% assign selected_product = section.settings.product_id %}
+
+        <div class="question-product">
+          <div class="question-product-price">
+            <div>
+              {% if section.settings.old_price == true %}
+                <s>{{ selected_product.compare_at_price | money_without_trailing_zeros | remove: ',' }}</s>
+              {% endif %}
+              <p>
+                {{ selected_product.price | money_without_trailing_zeros | remove: ',' }}
+              </p>
+              <small>{{ shop.currency }}</small>
+            </div>
+          </div>
+          <div class="question-product-image">
+            <img
+              src="{{ section.settings.image_2 | image_url }}"
+              width="auto"
+              height="513"
+              loading="lazy"
+              alt="{{ section.settings.image_2.alt }}"
+            >
+          </div>
+        </div>
+
+        <div class="question-cta">
+          <div>
+            <a href="/cart/{{ selected_product.variants[0].id }}:1" class="button button--primary button-lg">BUY NOW</a>
+          </div>
+          {% render 'atc-icons' %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Question Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "sub_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "product",
+      "id": "product_id",
+      "label": "Select Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "old_price",
+      "label": "Show old price"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Question Section"
+    }
+  ]
+}
+{% endschema %}

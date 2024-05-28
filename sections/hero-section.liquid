@@ -1,0 +1,140 @@
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div id="Hero-{{ section.id }}" class="hero-section">
+  <div class="page-width">
+    <div class="hero-section-content">
+      <div class="hero-header">
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.sub_heading != blank %}
+          <h3>{{ section.settings.sub_heading }}</h3>
+        {% endif %}
+      </div>
+
+      <div class="hero-woman">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | image_url }}"
+            width="auto"
+            height="600"
+            loading="lazy"
+            alt="{{ section.settings.image.alt }}"
+          >
+        {% endif %}
+      </div>
+
+      {% if section.settings.product_id != null %}
+        {% assign selected_product = section.settings.product_id %}
+
+        <div class="hero-product">
+          <div class="hero-product-price">
+            <div>
+              {% if section.settings.old_price == true %}
+                <s>{{ selected_product.compare_at_price | money_without_trailing_zeros | remove: ',' }}</s>
+              {% endif %}
+              <p>
+                {{ selected_product.price | money_without_trailing_zeros | remove: ',' }}
+              </p>
+              <small>{{ shop.currency }}</small>
+            </div>
+          </div>
+          <div class="home-product-image">
+            <img
+              src="{{ section.settings.image_2 | image_url }}"
+              width="auto"
+              height="513"
+              loading="lazy"
+              alt="{{ section.settings.image_2.alt }}"
+            >
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <div>
+            <a href="/cart/{{ selected_product.variants[0].id }}:1" class="button button--primary">BUY NOW</a>
+            <a href="/products/{{ selected_product }}" class="button button--secondary-solid"
+              >Learn More
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.16113 9.62918L5.57113 5.52681L1.16113 1.4245" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          {% render 'atc-icons' %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "my <i>inline</i> <b>text</b>",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub_heading",
+      "default": "my <i>inline</i> <b>text</b>",
+      "label": "Subheading"
+    },
+    {
+      "type": "product",
+      "id": "product_id",
+      "label": "Select Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "old_price",
+      "label": "Show old price"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
+{% endschema %}

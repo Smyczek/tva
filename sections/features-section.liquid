@@ -1,0 +1,127 @@
+{{ 'section-features.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div id="Features-{{ section.id }}" class="features-section color-scheme-1">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="features-section-content">
+      <div class="features-product-wrapper">
+        {% if section.settings.product_id != null %}
+          {% assign selected_product = section.settings.product_id %}
+
+          <div class="features-product">
+            <div class="features-product-price">
+              <div>
+                {% if section.settings.old_price == true %}
+                  <s>{{ selected_product.compare_at_price | money_without_trailing_zeros | remove: ',' }}</s>
+                {% endif %}
+                <p>
+                  {{ selected_product.price | money_without_trailing_zeros | remove: ',' }}
+                </p>
+                <small>{{ shop.currency }}</small>
+              </div>
+            </div>
+            <div class="features-product-image">
+              <img
+                src="{{ section.settings.image | image_url }}"
+                width="auto"
+                height="370"
+                loading="lazy"
+                alt="{{ section.settings.image.alt }}"
+              >
+            </div>
+          </div>
+
+          <div class="features-cta">
+            <a href="/cart/{{ selected_product.variants[0].id }}:1" class="button button--primary button-md">BUY NOW</a>
+            {% if request.page_type != 'product' %}
+              <a href="/products/{{ selected_product }}" class="button button--secondary-solid button-md">Learn More</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="features-text">
+        {% if section.settings.heading != blank %}
+          <h2 class="h1">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.txt != blank %}
+          <div class="features-list">{{ section.settings.txt }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Features Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "txt",
+      "label": "Text"
+    },
+    {
+      "type": "product",
+      "id": "product_id",
+      "label": "Select Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "old_price",
+      "label": "Show old price"
+    },
+    {
+      "type": "range",
+      "id": "top_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.top_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features Section"
+    }
+  ]
+}
+{% endschema %}
